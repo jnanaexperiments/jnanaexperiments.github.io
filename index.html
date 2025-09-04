@@ -9,142 +9,74 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 1rem;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #111;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 2rem;
+      font-family: "Comic Sans MS", "Chalkboard SE", cursive, system-ui, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      text-align: center; /* everything centered */
     }
 
     header img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px; /* optional: soft rounded corners */
-    }
-
-    main {
-      display: flex;
-      flex: 1;
-      gap: 2rem;
-      align-items: flex-start; /* aligns text and buttons at the top */
-      flex-wrap: wrap;
-    }
-
-    .content {
-      flex: 2;
-      min-width: 280px;
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
     }
 
     .buttons {
-      flex: 1;
+      margin: 1.5rem 0;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 1rem;
-      min-width: 200px;
     }
 
-    h1 {
-      margin-bottom: 1rem;
-      color: #333;
-    }
-
-    p {
-      margin: 1rem 0;
-      text-align: left;
-    }
-
-    .action-button {
-      background-color: #1a73e8;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      text-decoration: none;
-      border-radius: 6px;
+    .button {
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.1rem;
       font-weight: bold;
-      text-align: center;
-      transition: background-color 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 3px 3px 0px #00000055;
+      transition: transform 0.1s ease;
     }
 
-    .action-button:hover {
-      background-color: #1558b0;
+    .button:hover {
+      transform: translateY(-3px);
     }
+
+    .science { background-color: #708d81; }
+    .art { background-color: #a3bfd9; }
+    .tech { background-color: #d88c6e; }
+    .rambles { background-color: #f4c95d; color: #333; }
 
     footer {
-      margin-top: 3rem;
+      margin: 2rem 0;
       font-size: 0.9rem;
       color: #555;
-      border-top: 1px solid #ddd;
-      padding: 1.5rem 0 2rem 0;
-      text-align: center;
-      background: #f4f4f4;
-      border-radius: 8px;
-    }
-
-    footer a {
-      color: #1a0dab;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive: stack buttons below text on small screens */
-    @media (max-width: 768px) {
-      main {
-        flex-direction: column;
-      }
-      .buttons {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .action-button {
-        flex: 1;
-        min-width: 120px;
-      }
     }
   </style>
 </head>
 <body>
-  <!-- Banner Image -->
   <header>
-    <img src="banner.png" alt="Jnana Experiments Banner">
+    <img src="banner.png" alt="Site Banner">
   </header>
 
+  <div class="buttons">
+    <a href="science.html" class="button science">Science</a>
+    <a href="art.html" class="button art">Art</a>
+    <a href="tech.html" class="button tech">Tech</a>
+    <a href="rambles.html" class="button rambles">Rambles</a>
+  </div>
+
   <main>
-    <!-- Left side content -->
-    <div class="content">
-      <h1>Welcome</h1>
-
-      <p>My father once ran a passion-project school where he taught Mathematics. It closed within a few years due to some unfortunate constraints of reality at that time. I was never a bright student in Mathematics (my high school teacher famously (well, famously in my childhood highlights) once threw my notebook out of class and asked me to get out at which point my English professor told me, “You’re a writer, kid; you’ll be a great author someday.” Greatness remains elusive, but those words lifted me. Being an educator, mentor, or teacher is nothing short of magic that way).</p>
-
-      <p>I was probably a disappointment to my father then. Recently, we met one of his students randomly at a restaurant, and he praised my father’s excellent oratory skills. Amidst nostalgia, my father recalled soem unique details from my childhood that helped me accept a part of myself; the part that flits between projects, passions, and is forever passionately and relentlessly curious about everything.</p>
-
-      <p>My father’s passion project was called <em>jnanatutorials</em>. This is mine: <strong>jnanaexperiments</strong>.</p>
-
-      <p>Happy reading, fellow atoms. I hope it sparks a little joy and a lot of wonder. Thank you for your attention.</p>
-    </div>
-
-    <!-- Right side buttons -->
-    <div class="buttons">
-      <a href="science.html" class="action-button">Science</a>
-      <a href="writer.html" class="action-button">Writer</a>
-      <a href="art.html" class="action-button">Art</a>
-    </div>
+    <h1>Welcome to Jnana Experiments</h1>
+    <p>This is my little corner of the web where I share science, writing, art, and rambles.</p>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>All original content on this site (including text, blog posts, and graphics) is licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)</a>.</p>
-    <p>The website’s source code is licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
+    <p>© 2025 Jnana Experiments · All content under CC BY-NC 4.0 · Code under MIT</p>
   </footer>
 </body>
 </html>
