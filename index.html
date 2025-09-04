@@ -21,9 +21,11 @@
       display: flex;
       flex: 1;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     .content {
       flex: 2;
+      min-width: 280px;
     }
     .buttons {
       flex: 1;
@@ -32,6 +34,7 @@
       justify-content: flex-start;
       gap: 1rem;
       margin-top: 1rem;
+      min-width: 200px;
     }
     h1 {
       margin-bottom: 1rem;
@@ -70,6 +73,22 @@
     }
     footer a:hover {
       text-decoration: underline;
+    }
+
+    /* Responsive: stack buttons below text on small screens */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+      .buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .action-button {
+        flex: 1;
+        min-width: 120px;
+      }
     }
   </style>
 </head>
